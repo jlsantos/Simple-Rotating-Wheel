@@ -1,0 +1,94 @@
+/*  Demo styles
+    ------------------------------------------------------- */
+.if_rotate-animation {
+  position: relative;
+  margin: 1em auto;
+  border: solid 2em white;
+  width: 16em; height: 16em;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(36deg, #272b66 42.34%, transparent 42.34%),
+    linear-gradient(72deg, #2d559f 75.48%, transparent 75.48%),
+    linear-gradient(-36deg, #9ac147 42.34%, transparent 42.34%) 100% 0,
+    linear-gradient(-72deg, #639b47 75.48%, transparent 75.48%) 100% 0, 
+    linear-gradient(36deg, transparent 57.66%, #e1e23b 57.66%) 100% 100%,
+    linear-gradient(72deg, transparent 24.52%, #f7941e 24.52%) 100% 100%,
+    linear-gradient(-36deg, transparent 57.66%, #662a6c 57.66%) 0 100%,
+    linear-gradient(-72deg, transparent 24.52%, #9a1d34 24.52%) 0 100%, 
+    #43a1cd linear-gradient(#ba3e2e, #ba3e2e) 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  transition: 1s;
+}
+.if_rotate-animation:after {
+  position: absolute;
+  top: 50%; left: 50%;
+  margin: -2.8em;
+  width: 5.6em; height: 5.6em;
+  border-radius: 50%;
+  background: white;
+  content: '';
+}
+.if_rotate-animation {
+  -webkit-animation: rotate 2s linear 0 infinite normal;
+  -moz-animation: rotate 2s linear 0s infinite normal;
+  -o-animation: rotate 2s linear 0 infinite normal;
+  -ms-animation: rotate 2s linear 0 infinite normal;
+  animation: rotate 2s linear 0 infinite normal;
+}
+.if_rotate-animation:hover{
+     -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+
+  }
+  to { 
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(0deg);
+
+  }
+  to { 
+    -o-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+
+  }
+  to { 
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}
